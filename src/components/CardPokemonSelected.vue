@@ -1,18 +1,40 @@
 <script setup>
+    const pokemon = defineProps(["name", "xp", "height", "sprite"])
 </script>
 
 <template>
-    <div class="card">
-        <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card CardPokemonSelected">
+        <img 
+            :alt="pokemon.name"
+            :src="pokemon.sprite" 
+            class="card-img-top pt-2" 
+            height="250"
+            
+            >
         <div class="card-body">
-            <h5 class="card-title text-center">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            
+            <h5 class="card-title text-center">{{ pokemon.name }}</h5>
+            <div class="row">
+                <hr>
+                <section class="col">
+                    <strong>XP:</strong>
+                    <span>{{ pokemon.xp }}</span>
+                </section>
+                
+                <section class="col">
+                    <strong>Altura:</strong>
+                    <span>{{pokemon.height}}</span>
+                </section>
+                
+            </div>
         </div>
     </div>
 </template>
 
 
-<style>
-
+<style scoped>
+.CardPokemonSelected{
+    height: 450px;
+    background: radial-gradient(#17bd5c, #074986);
+}
 </style>

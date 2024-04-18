@@ -17,18 +17,12 @@
 
 <style scoped>
     .cardListPokemon{
-        /*background: radial-gradient(#156f99, #0a2e50);*/
-        background: linear-gradient(217deg, rgba(30, 255, 0, 0.377), rgba(255,0,0,0) 40%),
-                    linear-gradient(127deg, rgba(55, 200, 200, 0.486), rgba(55,200,200,0) 70%),
-                    linear-gradient(336deg, rgba(0, 0, 255, 0.466), rgba(0,0,255,0) 65%);
+        background: radial-gradient(#56ca86, #074986);
         cursor: pointer;
-        transition: 0.3s;
     }
     .cardListPokemon:hover{
-        background: linear-gradient(237deg, rgba(0, 255, 64, 0.7), rgba(255,0,0,0) 35%),
-                    linear-gradient(127deg, rgba(55,200,200,.8), rgba(55,200,200,0) 50%),
-                    linear-gradient(336deg, rgba(0,0,255,.9), rgba(0,0,255,0) 55%);
         
+        background: radial-gradient(#17bd5c, #074986);
     }
     .cardListPokemon img:hover{
         padding: .1rem;
