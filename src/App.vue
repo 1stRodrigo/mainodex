@@ -8,21 +8,15 @@ let num = ref (0)
 
 <template>
     <nav class="navbar navbar-expand-lg bg-primary">
-  <div class="container-fluid">
+  <div class="container-fluid d-flex justify-content-between">
       
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <router-link class="navbar-brand" to="/">
+          <img src="./assets/img/icons8-bullbasaur-48.png" alt="">Mainodex
+      </router-link>
 
-        <router-link class="navbar-brand" to="/">
-            <img src="./assets/img/icons8-bullbasaur-48.png" alt="">Mainodex
-        </router-link>
-        
-        <!-- Barra de pesquisa -->
-        <form class="d-flex gap-2" role="search">
-                    <input class="form-control form-group" type="search" placeholder="Buscar Pokemón" aria-label="Search">
-                    <button class="btn btn-success" type="submit">Buscar</button>
-        </form>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon bold"></span>
+        </button>
 
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
@@ -73,7 +67,7 @@ let num = ref (0)
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 56px;
+        height: 50px;
     }
 </style>
 
