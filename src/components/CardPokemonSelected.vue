@@ -1,19 +1,30 @@
 <script setup>
-    const pokemon = defineProps(["name", "xp", "height", "sprite"])
+    const pokemon = defineProps(["name", "xp", "height", "sprite", "loading"])
 </script>
 
 <template>
-    <div class="card CardPokemonSelected">
+    <div 
+    class="card CardPokemonSelected"
+    :class="loading ? '' : 'animate__animated animate__flipInY'"
+    >
+    
         <img 
-            :alt="pokemon.name"
-            :src="pokemon.sprite" 
-            class="card-img-top pt-2" 
-            height="250"
-            
-            >
+        v-if="pokemon.name"
+        :alt="pokemon.name"
+        :src="pokemon.sprite" 
+        class="card-img-top pt-2" 
+        height="250">
+
+        <img
+        v-else="pokemon.name"
+        alt="???"
+        src="../assets/img/Pokemon_Egg_icon-icons.com_67525.svg" 
+        class="card-img-top pt-2" 
+        height="250">
+        
         <div class="card-body">
             
-            <h5 class="card-title text-center">{{ pokemon.name }}</h5>
+            <h5 class="card-title text-center">{{ pokemon.name || '???' }}</h5>
             <div class="row">
                 <hr>
                 <section class="col">
@@ -34,7 +45,7 @@
 
 <style scoped>
 .CardPokemonSelected{
-    height: 450px;
-    background: radial-gradient(#17bd5c, #074986);
+    height: 75vh;
+    background: radial-gradient(#ffe600, #b16501);
 }
 </style>

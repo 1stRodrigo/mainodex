@@ -1,6 +1,12 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="container mt-4 text-body-secondary">
+    <div class="card">
+      <h1 class="text-center">Sobre o projeto</h1>
+      <div class="card-body">
+        teste
+      </div>
+
+    </div>
   </div>
 </template>
 

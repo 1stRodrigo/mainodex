@@ -11,7 +11,7 @@ let num = ref (0)
   <div class="container-fluid d-flex justify-content-between">
       
       <router-link class="navbar-brand" to="/">
-          <img src="./assets/img/icons8-bullbasaur-48.png" alt="">Mainodex
+          <img src="./assets/img/meowth_icon-icons.com_67543.png" alt="" style="width: 42px;">Mainodex
       </router-link>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,10 +21,10 @@ let num = ref (0)
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="/">Início</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="about">Sobre</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Pricing</a>
@@ -60,6 +60,10 @@ let num = ref (0)
 </template>
 
 <style>
+    body{
+        height: 100vh;
+        background: radial-gradient(#175fbd, #074986)
+    }
     footer{
         position: fixed;
         bottom: 0;

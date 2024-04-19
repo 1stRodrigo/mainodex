@@ -10,6 +10,7 @@
     let urlBasePng = ref('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/')
     let searchPokemonField = ref("")
     let pokemonSelected = reactive(ref());
+    let loading = ref(false)
 
     
     onMounted( ()=>{
@@ -31,9 +32,13 @@
 
     /* como está chamando a api, a função se torna "async" */
     const selectPokemon = async (pokemon) => {
+        loading.value = true;
         await fetch(pokemon.url)
         .then(res => res.json())
-        .then(res => pokemonSelected.value = res);
+        .then(res => pokemonSelected.value = res)
+        .catch(err => alert(err))
+        .finally(()=> loading.value = false)
+
 
         console.log(pokemonSelected.value)
         
@@ -43,7 +48,7 @@
 
 <template>
     <main>
-        <div class="container">   
+        <div class="container text-body-secondary">   
                      
             <div class="row mt-4">
                 <div class="col-sm-12 col-md-6">
@@ -53,6 +58,7 @@
                     :xp="pokemonSelected?.base_experience"
                     :height="pokemonSelected?.height"
                     :sprite="pokemonSelected?.sprites.other.home.front_shiny"
+                    :loading="loading"
                     />
                 </div>
 
@@ -96,7 +102,7 @@
 
 <style scoped>
 .card-list{
-    max-height: 450px;
+    max-height: 75vh;
     overflow-y: scroll;
     overflow-x: hidden;    
 }

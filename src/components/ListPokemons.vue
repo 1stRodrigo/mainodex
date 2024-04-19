@@ -17,12 +17,12 @@
 
 <style scoped>
     .cardListPokemon{
-        background: radial-gradient(#56ca86, #074986);
+        background: radial-gradient(#ffe600, #c26f02);
         cursor: pointer;
     }
     .cardListPokemon:hover{
         
-        background: radial-gradient(#17bd5c, #074986);
+        background: radial-gradient(#ffe818, #a15600);
     }
     .cardListPokemon img:hover{
         padding: .1rem;
