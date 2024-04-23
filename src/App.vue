@@ -24,20 +24,7 @@ let num = ref (0)
                 <a class="nav-link active" aria-current="page" href="/">Início</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="about">Sobre</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown link
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+                <a class="nav-link" href="about" style="color: red; text-decoration: underline;"> Leia</a>
             </li>
         </ul>
     </div>
@@ -74,4 +61,3 @@ let num = ref (0)
         height: 50px;
     }
 </style>
-

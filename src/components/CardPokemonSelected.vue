@@ -1,5 +1,5 @@
 <script setup>
-    const pokemon = defineProps(["name", "xp", "height", "sprite", "loading"])
+    const pokemon = defineProps(["name", "xp", "height", "sprite", "loading", "moves", "game_indices" ])
 </script>
 
 <template>
@@ -36,7 +36,29 @@
                     <strong>Altura:</strong>
                     <span>{{pokemon.height}}</span>
                 </section>
+            </div>
+            <div class="row">
+                <section class="col">
+                    <strong>Movimentos de ataque:</strong>
+                    <span>{{pokemon.moves}}</span>
+                </section>
                 
+                <section class="col">
+                    <strong>Tipo:</strong>
+                    <span>{{}}</span>
+                </section>
+            </div>
+            <div class="row">
+                <section class="col">
+                    <strong>Evoluções:</strong>
+                    <span>{{}}</span>
+                </section>
+                
+                <section class="col">
+                    <strong>Game Indices:</strong>
+                    <span>{{pokemon.game_indices}}</span>
+                </section>
+
             </div>
         </div>
     </div>

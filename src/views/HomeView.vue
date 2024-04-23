@@ -59,6 +59,8 @@
                     :height="pokemonSelected?.height"
                     :sprite="pokemonSelected?.sprites.other.home.front_shiny"
                     :loading="loading"
+                    :moves="pokemonSelected?.moves[0].move.name"
+                    :game_indices="pokemonSelected?.game_indices[0].game_index"
                     />
                 </div>
 
